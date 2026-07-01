@@ -1,0 +1,198 @@
+/* mixins */
+
+/* responsive */
+
+$breakpoints: (
+  "phone-down": 568px,
+  "tablet-up": 768px,
+  "tablet-down": 900px,
+  "desktop-up": 1024px,
+  "desktop-down": 1280px,
+  "widescreen-up": 1440px
+);
+
+/* from… */
+@mixin media-min($_key) {
+  @media screen
+    and (min-width: map-get($breakpoints, $_key)) {
+    &{ @content; }
+  }
+}
+
+/* to… */
+@mixin media-max($_key) {
+  @media screen
+    and (max-width: map-get($breakpoints, $_key) - 1) {
+    &{ @content; }
+  }
+}
+
+/* from… to… */
+@mixin media-between($_keymin, $_keymax) {
+  @media screen
+    and (min-width: map-get($breakpoints, $_keymin))
+    and (max-width: map-get($breakpoints, $_keymax) - 1) {
+    &{ @content; }
+  }
+}
+
+/* at… */
+@mixin media($_key) {
+  @media screen
+    and (min-width: map-get($breakpoints, $_key))
+    and (max-width: map-get(
+        $breakpoints,
+        nth(map-keys($breakpoints), index(map-keys($breakpoints), $_key) + 1)
+      ) - 1) {
+    &{ @content; }
+  }
+}
+
+/* fonts */
+
+@mixin font-regular {
+  font-weight: var(--font-weight-regular);
+  font-style: var(--font-style-normal);
+}
+
+@mixin font-regular-italic {
+  font-weight: var(--font-weight-regular);
+  font-style: var(--font-style-italic);
+}
+
+@mixin font-bold {
+  font-weight: var(--font-weight-bold);
+  font-style: var(--font-style-normal);
+}
+
+@mixin font-bold-italic {
+  font-weight: var(--font-weight-bold);
+  font-style: var(--font-style-italic);
+}
+
+/* titles */
+
+@mixin title-main {
+  @include font-regular;
+  font-size: var(--size-96);
+}
+
+@mixin subtitle-main {
+  @include font-regular;
+  font-size: var(--size-64);
+}
+
+@mixin title-h1-bold {
+  @include font-bold;
+  font-size: var(--size-40);
+}
+
+@mixin title-h1 {
+  @include font-regular;
+  font-size: var(--size-40);
+}
+
+@mixin title-h2-bold {
+  @include font-bold;
+  font-size: var(--size-32);
+}
+
+@mixin title-h2 {
+  @include font-regular;
+  font-size: var(--size-32);
+}
+
+@mixin title-h3-bold {
+  @include font-bold;
+  font-size: var(--size-24);
+}
+
+@mixin title-h3 {
+  @include font-regular;
+  font-size: var(--size-24);
+}
+
+/* texts */
+
+@mixin paragraphe {
+  @include font-regular;
+  font-size: var(--size-16);
+}
+
+@mixin paragraphe-bold {
+  @include font-bold;
+  font-size: var(--size-16);
+}
+
+/* buttons & links */
+
+@mixin button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--size-8);
+  font-weight: var(--font-weight-bold);
+  background: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+@mixin button-solid {
+  color: var(--neutral-white);
+    box-shadow: var(--button-shadow);
+    border-radius: var(--radius-button);
+    border: none;
+    &:hover {
+        background: var(--primary-dark);
+    }
+    &:active {
+        box-shadow: none;
+        background: var(--neutral-dark-blue);
+    }
+}
+
+@mixin button-circle {
+  height: var(--size-40);
+  width: var(--size-40);
+  border-radius: var(--radius-circle);
+  border: 1px solid var(--neutral-white);
+  padding: 0;
+  & .feather {
+    stroke: var(--neutral-white);
+  }
+  &:hover {
+      background: var(--primary);
+  }
+  &:active {
+      box-shadow: none;
+      background: var(--primary-dark);
+  }
+}
+
+@mixin link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--size-8);
+  padding-bottom: var(--size-2);
+  border-bottom: 1px solid var(--primary);
+  color: var(--primary);
+  font-weight: var(--font-weight-bold);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  &:hover {
+      color: var(--primary-dark);
+      border-color: var(--primary-dark);
+  }
+  &:active {
+      color: var(--neutral-dark-blue);
+      border-color: var(--neutral-dark-blue);
+  }
+}

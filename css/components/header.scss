@@ -1,0 +1,160 @@
+@use "../mixins";
+
+/* header */
+
+.header {
+  background: var(--primary-gradient-dark);
+  padding: calc(var(--size-64) + var(--size-64)) var(--size-64) var(--size-64) var(--size-64);
+
+  &__slider-container {
+    position: relative;
+    display: flex;
+    &--left {
+      position: relative;
+      display: grid;
+      gap: var(--size-40);
+      background: var(--neutral-dark-blue);
+      width: 75%;
+      padding: var(--size-40);
+      border-radius: var(--size-40) 0 0 var(--size-40);
+      border-right: 2px solid var(--primary);
+      background-image: url(img/star.svg);
+      background-position: left 20px bottom 20px;
+      background-repeat: no-repeat;
+      background-size: 200px;
+    }
+
+    &--title {
+      position: relative;
+      @include mixins.title-main;
+      text-align: center;
+      color: var(--neutral-white);
+      &:before {
+        content: "";
+        height: var(--size-16);
+        width: 100%;
+        display: block;
+        position: absolute;
+        bottom: 18px;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        max-width: 490px;
+        margin: auto;
+        background: var(--primary-gradient-dark);
+      }
+      & span {
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    &--subtitle {
+      @include mixins.subtitle-main;
+      color: var(--primary-light);
+      &:nth-child(odd) {
+        text-align: center;
+      }
+    }
+
+    &--quote-title {
+      span {
+        display: block;
+        color: var(--neutral-white);
+        text-align: right;
+      }
+      & span:nth-child(odd) {
+        @include mixins.title-h2;
+      }
+      & span:nth-child(even) {
+        @include mixins.title-h2-bold;
+      }
+    }
+
+    &--button-slide-bottom {
+      position: absolute;
+      right:-20px;
+      bottom: -20px;
+      animation: slide-bottom var(--transition-slow) infinite alternate both;
+    }
+
+    &--right {
+      width: 25%;
+    }
+  }
+
+  &__slider {
+  }
+
+  &__anchor-container {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    gap: var(--size-40);
+    background: var(--neutral-dark-blue);
+    width: 100%;
+    padding: var(--size-40);
+    border-radius: var(--size-40);
+
+    &--top {
+      width: 100%;
+      display: grid;
+      gap: var(--size-40);
+    }
+
+    &--title {
+      position: relative;
+      @include mixins.title-main;
+      text-align: center;
+      color: var(--neutral-white);
+      &:before {
+        content: "";
+        height: var(--size-16);
+        width: 100%;
+        display: block;
+        position: absolute;
+        bottom: 18px;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        max-width: 490px;
+        margin: auto;
+        background: var(--primary-gradient-dark);
+      }
+      & span {
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    &--subtitle {
+      @include mixins.subtitle-main;
+      color: var(--primary-light);
+      &:nth-child(odd) {
+        text-align: right;
+      }
+    }
+
+    &--quote-title {
+      @include mixins.title-h3;
+      @include mixins.font-regular-italic;
+      text-align: center;
+      color: var(--neutral-white-opacity-75);
+    }
+
+
+    &--bottom {
+      display: grid;
+      gap: var(--size-40);
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+    }
+
+    &--button-slide-bottom {
+      position: absolute;
+      bottom: 0;
+      animation: slide-bottom var(--transition-slow) infinite alternate both;
+    }
+
+  }
+}

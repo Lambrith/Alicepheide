@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/* mixins */
+/* responsive */
+/* from… */
+/* to… */
+/* from… to… */
+/* at… */
+/* fonts */
+/* titles */
+/* texts */
+/* buttons & links */
+/* classes utilities */
+/* titles */
+.title-h1 {
+  font-weight: var(--font-weight-regular);
+  font-style: var(--font-style-normal);
+  font-size: var(--size-40);
+}
+
+.title-h1-bold {
+  font-weight: var(--font-weight-bold);
+  font-style: var(--font-style-normal);
+  font-size: var(--size-40);
+}
+
+.title-h2 {
+  font-weight: var(--font-weight-regular);
+  font-style: var(--font-style-normal);
+  font-size: var(--size-32);
+}
+
+.title-h2-bold {
+  font-weight: var(--font-weight-bold);
+  font-style: var(--font-style-normal);
+  font-size: var(--size-32);
+}
+
+.title-h3 {
+  font-weight: var(--font-weight-regular);
+  font-style: var(--font-style-normal);
+  font-size: var(--size-24);
+}
+
+.title-h3-bold {
+  font-weight: var(--font-weight-bold);
+  font-style: var(--font-style-normal);
+  font-size: var(--size-24);
+}
+
+/* texts */
+.paragraphe {
+  font-weight: var(--font-weight-regular);
+  font-style: var(--font-style-normal);
+  font-size: var(--size-16);
+}
+
+/*# sourceMappingURL=utilities.css.map */

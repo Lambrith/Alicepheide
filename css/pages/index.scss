@@ -1,0 +1,109 @@
+@use "../mixins";
+
+/* Homepage */
+
+.home {
+
+  &-portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-40);
+    background: var(--primary-gradient-dark-invert);
+
+    &__title {
+      position: relative;
+      display: inline-block;
+      @include mixins.subtitle-main;
+      color: var(--neutral-white);
+
+      &:after {
+        content: "";
+        height: var(--size-16);
+        width: 100%;
+        display: block;
+        background: var(--primary-gradient-dark);
+      }
+    }
+
+    &__title-img {
+      height: 80px;
+    }
+
+    &__text {
+      color: var(--neutral-white);
+      @include mixins.paragraphe;
+      max-width: 50%;
+      margin: auto;
+    }
+  }
+
+  &-artist {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-40);
+    background: var(--primary-gradient-dark);
+
+    &__title {
+      position: relative;
+      display: inline-block;
+      @include mixins.subtitle-main;
+      color: var(--neutral-white);
+
+      &:after {
+        content: "";
+        height: var(--size-16);
+        width: 100%;
+        display: block;
+        background: var(--primary-gradient-dark-invert);
+      }
+    }
+
+    &__title-img,
+    &__text-img {
+      height: 80px;
+    }
+
+    &__text {
+      color: var(--neutral-white);
+      @include mixins.paragraphe;
+    }
+
+    &__container {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: var(--size-24);
+
+      &--right {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size-24);
+      }
+    }
+
+    &__portrait-img {
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: var(--button-shadow);
+    }
+
+    &__bloc-buttons {
+      display: flex;
+      gap: 24px;
+      justify-content: flex-end;
+    }
+  }
+
+  &__label {
+    background: var(--neutral-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+      color: var(--neutral-white);
+    }
+  }
+
+}

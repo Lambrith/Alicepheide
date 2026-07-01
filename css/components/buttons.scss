@@ -1,0 +1,59 @@
+@use "../mixins";
+
+/* buttons */
+
+.button {
+  @include mixins.button;
+
+  &--primary, &--secondary {
+    @include mixins.button-solid;
+  }
+
+  &--primary {
+    background: var(--primary);
+  }
+
+  &--m {
+    font-size: var(--size-16);
+    padding: var(--size-8) var(--size-16);
+
+    .button__icon {
+      &.feather {
+        width: var(--size-16);
+      }
+    }
+  }
+
+  &--xl {
+    font-size: var(--size-20);
+    padding: var(--size-12) var(--size-24);
+
+    .button__icon {
+      &.feather {
+        width: var(--size-24);
+      }
+    }
+  }
+
+  &--circle {
+    @include mixins.button-circle;
+    .button__icon {
+      &.feather {
+        width: var(--size-40);
+      }
+    }
+    img.button__icon {
+      width: var(--size-20);
+    }
+  }
+
+  &--link {
+    text-decoration: none;
+  }
+}
+
+/* link */
+
+.link {
+@include mixins.link;
+}

@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/* mixins */
+/* responsive */
+/* from… */
+/* to… */
+/* from… to… */
+/* at… */
+/* fonts */
+/* titles */
+/* texts */
+/* buttons & links */
+/* Homepage */
+.home__portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-40);
+  background: var(--primary-gradient-dark-invert);
+}
+.home__portfolio--title {
+  position: relative;
+  display: inline-block;
+  font-weight: var(--font-weight-regular);
+  font-style: var(--font-style-normal);
+  font-size: var(--size-64);
+  color: var(--neutral-white);
+}
+.home__portfolio--title:after {
+  content: "";
+  height: var(--size-16);
+  width: 100%;
+  display: block;
+  background: var(--primary-gradient-dark);
+}
+.home__portfolio--title-img {
+  height: 80px;
+}
+.home__portfolio--text {
+  color: var(--neutral-white);
+  font-weight: var(--font-weight-regular);
+  font-style: var(--font-style-normal);
+  font-size: var(--size-16);
+  max-width: 50%;
+  margin: auto;
+}
+.home__artist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-40);
+  background: var(--primary-gradient-dark);
+}
+.home__artist--title {
+  position: relative;
+  display: inline-block;
+  font-weight: var(--font-weight-regular);
+  font-style: var(--font-style-normal);
+  font-size: var(--size-64);
+  color: var(--neutral-white);
+}
+.home__artist--title:after {
+  content: "";
+  height: var(--size-16);
+  width: 100%;
+  display: block;
+  background: var(--primary-gradient-dark-invert);
+}
+.home__artist--title-img, .home__artist--paragraphe-img {
+  height: 80px;
+}
+.home__artist--text {
+  color: var(--neutral-white);
+  font-weight: var(--font-weight-regular);
+  font-style: var(--font-style-normal);
+  font-size: var(--size-16);
+}
+.home__artist--container {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: var(--size-24);
+}
+.home__artist--container--right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-24);
+}
+.home__artist--portrait-img {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--button-shadow);
+}
+.home__label {
+  background: var(--neutral-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__label__title {
+  color: var(--neutral-white);
+}
+
+/*# sourceMappingURL=index.css.map */

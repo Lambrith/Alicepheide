@@ -1,0 +1,17 @@
+/* layout */
+
+html {
+    font-size: 100%;
+}
+
+.body {
+    position: relative;
+    min-height: 100vh;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    font-style: var(--font-style-normal);
+}
+
+.section {
+      padding: var(--size-40);
+}

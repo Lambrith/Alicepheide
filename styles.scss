@@ -1,0 +1,24 @@
+/* import stylesheets */
+
+/* import reset */
+@use 'css/normalize';
+
+/* import variables, utilities, mixins */
+@use 'css/variables';
+@use 'css/mixins';
+@use 'css/utilities';
+@use 'css/animations';
+
+/* import components */
+@use 'css/components/header';
+@use 'css/components/header-navbar';
+@use 'css/components/layout';
+@use 'css/components/footer';
+@use 'css/components/main';
+@use 'css/components/buttons';
+
+/* import pages */
+@use 'css/pages/index';
+@use 'css/pages/portfolio';
+@use 'css/pages/mentions-legales';
+@use 'css/pages/building';

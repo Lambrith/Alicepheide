@@ -1,0 +1,60 @@
+/* variables */
+:root {
+  /* colors */
+  --primary-dark: #337786;
+  --primary: #00cccc;
+  --primary-light: #b8f9f9;
+  --primary-gradient: linear-gradient(180deg, var(--primary-dark) 0%, var(--primary) 100%);
+  --primary-gradient-dark: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 50%, var(--neutral-dark-blue) 100%);
+  --primary-gradient-dark-invert: linear-gradient(0deg, var(--primary) 0%, var(--primary-dark) 50%, var(--neutral-dark-blue) 100%);
+  --secondary-dark: #d46e28;
+  --secondary: #f4aa77;
+  --secondary-light: #ffddae;
+  --secondary-gradient: linear-gradient( to bottom, var(--secondary-dark), var(--secondary) );
+  --secondary-gradient-light: linear-gradient( to bottom, var(--secondary-dark), var(--secondary-light) );
+  --neutral-white: #ffffff;
+  --neutral-white-opacity-25: rgba(255, 255, 255, 0.25);
+  --neutral-white-opacity-50: rgba(255, 255, 255, 0.5);
+  --neutral-white-opacity-75: rgba(255, 255, 255, 0.75);
+  --neutral-black: #000000;
+  --neutral-dark: #052127;
+  --neutral-dark-opacity-10: rgba(5, 33, 39, 0.1);
+  --neutral-dark-blue: #023A46;
+  --neutral-grey: #EEF7F7;
+  --neutral-grey-light: #F6FCFC;
+  /* sizes */
+  --size-2: 0.125rem;
+  --size-4: 0.25rem;
+  --size-8: 0.5rem;
+  --size-12: 0.75rem;
+  --size-14: 0.875rem;
+  --size-16: 1rem;
+  --size-20: 1.25rem;
+  --size-24: 1.5rem;
+  --size-32: 2rem;
+  --size-40: 2.5rem;
+  --size-64: 4rem;
+  --size-96: 6rem;
+  /* font */
+  --font-family: "Quattrocento Sans", sans-serif;
+  --font-style-normal: normal;
+  --font-style-italic: italic;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  /* radius */
+  --radius-xxs: var(--size-2);
+  --radius-xs: var(--size-4);
+  --radius-s: var(--size-8);
+  --radius-m: var(--size-16);
+  --radius-l: var(--size-24);
+  --radius-circle: 50%;
+  --radius-button: 100px;
+  /* box-shadows */
+  --button-shadow: 0px var(--size-4) var(--size-4) 0px var(--neutral-dark-opacity-10);
+  /* transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-middle: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+}
+
+/*# sourceMappingURL=variables.css.map */

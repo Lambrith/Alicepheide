@@ -1,0 +1,211 @@
+
+@use "../mixins";
+
+.building {
+  width: 100%;
+  background-image: url(img/nuage-écureuil.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: right center;
+  background-repeat: no-repeat;
+  @include mixins.media-min("desktop-up") {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background: var(--neutral-white);
+  }
+
+  &__container {
+
+    &--left-column {
+      @include mixins.media-min("desktop-up") {
+        padding: var(--size-40);
+      }
+    }
+
+    &--right-column {
+      display: none;
+      @include mixins.media-min("desktop-up") {
+        display: block;
+        position: relative;
+        background: var(--primary-gradient);
+        &:before {
+          content:'';
+          position: absolute;
+          z-index: 0;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url(img/nuage-écureuil.jpg);
+          background-size: cover;
+          background-attachment: fixed;
+          background-position: right center;
+          background-repeat: no-repeat;
+          animation: fadeIn;
+          animation-duration: 3s;
+
+        }
+      }
+    }
+  }
+
+  &__logo {
+    display: block;
+    max-width: 254px;
+    margin: auto;
+    padding: var(--size-16);
+
+    &--mobile {
+      @include mixins.media-min("desktop-up") {
+        display:none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+      @include mixins.media-min("desktop-up") {
+        display:block;
+      }
+    }
+  }
+
+  &__title {
+
+    &--mobile {
+      @include mixins.title-h2;
+      text-align: center;
+      color: var(--primary-dark);
+      background: var(--neutral-white-opacity-75);
+      padding: var(--size-16);
+      @include mixins.media-min("desktop-up") {
+        display:none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+      @include mixins.media-min("desktop-up") {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:
+        "top"
+        "bottom";
+        justify-content: space-between;
+        align-content: space-between;
+        height: 100%;
+        padding: var(--size-40) 0;
+        @include mixins.title-h1;
+      }
+    }
+
+    &--first-bloc, &--second-bloc {
+      background: var(--neutral-white-opacity-75);
+      padding: var(--size-40);
+      border-left-width: 8px;
+      border-bottom-width: 8px;
+      border-style: solid;
+    }
+
+    &--first-bloc {
+      color: var(--primary);
+      border-color: var(--primary);
+      display: grid;
+      justify-self: start;
+      align-self: start;
+    }
+
+    &--second-bloc {
+      color: var(--secondary);
+      border-color: var(--secondary);
+      display: grid;
+      justify-self: end;
+      align-self: end;
+    }
+
+    &--strong {
+      @include mixins.title-h2-bold;
+      overflow-wrap: break-word;
+      @include mixins.media-min("desktop-up") {
+        @include mixins.title-h1-bold;
+      }
+    }
+  }
+
+  &__bottom {
+    display: grid;
+    justify-items: center;
+    max-width: 500px;
+    gap: var(--size-16);
+    margin: auto;
+    padding: var(--size-16);
+    @include mixins.media-min("desktop-up") {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__card {
+    width: 100%;
+    background: var(--neutral-white-opacity-75);
+    border-radius: var(--radius-m);
+    @include mixins.media-min("desktop-up") {
+      background: inherit;
+    }
+
+    &--shop {
+      padding: var(--size-24);
+      @include mixins.media-min("desktop-up") {
+        background: var(--neutral-grey-light);
+      }
+    }
+
+    &--social-networks {
+      padding: var(--size-8);
+      @include mixins.media-min("desktop-up") {
+        padding: 0;
+      }
+    }
+
+  }
+
+  &__card-title {
+    @include mixins.title-h3-bold;
+    text-align: center;
+    color: var(--neutral-dark-blue);
+    margin-bottom: var(--size-24);
+  }
+
+  &__card-content--shop {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    gap: var(--size-24);
+    margin: auto;
+  }
+
+  &__card-content--social-networks {
+    display: flex;
+    justify-content: center;
+    gap: var(--size-16);
+  }
+
+  &__paragraphe {
+    text-align: center;
+    color: var(--neutral-white);
+    @include mixins.media-min("desktop-up") {
+      text-align: left;
+      color: var(--neutral-dark-blue);
+    }
+  }
+
+  &__link {
+    &--mobile {
+      background: var(--neutral-white);
+      @include mixins.media-min("desktop-up") {
+      background: none;
+      }
+    }
+  }
+}

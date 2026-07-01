@@ -1,0 +1,37 @@
+@use "mixins";
+
+/* classes utilities */
+
+
+/* titles */
+
+.title-h1 {
+@include mixins.title-h1;
+}
+
+.title-h1-bold {
+@include mixins.title-h1-bold;
+}
+
+.title-h2 {
+@include mixins.title-h2;
+}
+
+.title-h2-bold {
+@include mixins.title-h2-bold;
+}
+
+.title-h3 {
+@include mixins.title-h3;
+}
+
+.title-h3-bold {
+@include mixins.title-h3-bold;
+}
+
+
+/* texts */
+
+.paragraphe {
+@include mixins.paragraphe;
+}

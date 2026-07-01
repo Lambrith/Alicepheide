@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/* mixins */
+/* responsive */
+/* from… */
+/* to… */
+/* from… to… */
+/* at… */
+/* fonts */
+/* titles */
+/* texts */
+/* buttons & links */
+/* navbar header */
+.header__navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-gradient);
+  padding: var(--size-24);
+  box-shadow: var(--button-shadow);
+}
+
+.menu-nav {
+  display: flex;
+  gap: var(--size-16);
+}
+.link-nav {
+  position: relative;
+  font-weight: var(--font-weight-bold);
+  font-style: var(--font-style-normal);
+  font-size: var(--size-16);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--size-8);
+  padding-bottom: var(--size-2);
+  color: var(--neutral-white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+.link-nav:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: var(--size-2);
+  background: var(--neutral-white);
+  transition: all var(--transition-fast);
+}
+.link-nav:hover:after {
+  width: 100%;
+  right: 0;
+}
+.link-nav:active {
+  color: var(--neutral-dark-blue);
+}
+.link-nav:active:after {
+  background: var(--neutral-dark-blue);
+}
+.link-nav__icon {
+  width: var(--size-16);
+}
+.link-nav__txt {
+  text-overflow: ellipsis;
+}
+
+.header__logo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 124px;
+  height: 124px;
+  background-color: var(--neutral-white);
+  border-radius: var(--radius-circle);
+  border: 0 solid transparent;
+  box-shadow: var(--button-shadow);
+  transition: var(--transition-middle);
+}
+.header__logo:hover {
+  border: 2px solid var(--primary);
+}
+.header__logo:active {
+  box-shadow: none;
+}
+.header__logo-img {
+  width: 90px;
+}
+
+/*# sourceMappingURL=header-navbar.css.map */

@@ -1,0 +1,15 @@
+@use "../mixins";
+
+/* main */
+
+.home__main {
+  .section {
+    padding: var(--size-40);
+    &__portfolio {
+      background: var(--primary-gradient-dark-invert);
+    }
+    &__alicepheide {
+      background: var(--primary-gradient-dark);
+    }
+  }
+}

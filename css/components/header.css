@@ -1,0 +1,165 @@
+@charset "UTF-8";
+/* mixins */
+/* responsive */
+/* from… */
+/* to… */
+/* from… to… */
+/* at… */
+/* fonts */
+/* titles */
+/* texts */
+/* buttons & links */
+/* header */
+.header {
+  background: var(--primary-gradient-dark);
+  padding: calc(var(--size-64) + var(--size-64)) var(--size-64) var(--size-64) var(--size-64);
+}
+.header__slider-container {
+  position: relative;
+  display: flex;
+}
+.header__slider-container--left {
+  position: relative;
+  display: grid;
+  gap: var(--size-40);
+  background: var(--neutral-dark-blue);
+  width: 75%;
+  padding: var(--size-40);
+  border-radius: var(--size-40) 0 0 var(--size-40);
+  border-right: 2px solid var(--primary);
+  background-image: url(img/star.svg);
+  background-position: left 20px bottom 20px;
+  background-repeat: no-repeat;
+  background-size: 200px;
+}
+.header__slider-container--title {
+  position: relative;
+  font-weight: var(--font-weight-regular);
+  font-style: var(--font-style-normal);
+  font-size: var(--size-96);
+  text-align: center;
+  color: var(--neutral-white);
+}
+.header__slider-container--title:before {
+  content: "";
+  height: var(--size-16);
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 18px;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  max-width: 490px;
+  margin: auto;
+  background: var(--primary-gradient-dark);
+}
+.header__slider-container--title span {
+  position: relative;
+  z-index: 2;
+}
+.header__slider-container--subtitle {
+  font-weight: var(--font-weight-regular);
+  font-style: var(--font-style-normal);
+  font-size: var(--size-64);
+  color: var(--primary-light);
+}
+.header__slider-container--subtitle:nth-child(odd) {
+  text-align: center;
+}
+.header__slider-container--quote-title span {
+  display: block;
+  color: var(--neutral-white);
+  text-align: right;
+}
+.header__slider-container--quote-title span:nth-child(odd) {
+  font-weight: var(--font-weight-regular);
+  font-style: var(--font-style-normal);
+  font-size: var(--size-32);
+}
+.header__slider-container--quote-title span:nth-child(even) {
+  font-weight: var(--font-weight-bold);
+  font-style: var(--font-style-normal);
+  font-size: var(--size-32);
+}
+.header__slider-container--button-slide-bottom {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  animation: slide-bottom var(--transition-slow) infinite alternate both;
+}
+.header__slider-container--right {
+  width: 25%;
+}
+.header__anchor-container {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: var(--size-40);
+  background: var(--neutral-dark-blue);
+  width: 100%;
+  padding: var(--size-40);
+  border-radius: var(--size-40);
+}
+.header__anchor-container--top {
+  width: 100%;
+  display: grid;
+  gap: var(--size-40);
+}
+.header__anchor-container--title {
+  position: relative;
+  font-weight: var(--font-weight-regular);
+  font-style: var(--font-style-normal);
+  font-size: var(--size-96);
+  text-align: center;
+  color: var(--neutral-white);
+}
+.header__anchor-container--title:before {
+  content: "";
+  height: var(--size-16);
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 18px;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  max-width: 490px;
+  margin: auto;
+  background: var(--primary-gradient-dark);
+}
+.header__anchor-container--title span {
+  position: relative;
+  z-index: 2;
+}
+.header__anchor-container--subtitle {
+  font-weight: var(--font-weight-regular);
+  font-style: var(--font-style-normal);
+  font-size: var(--size-64);
+  color: var(--primary-light);
+}
+.header__anchor-container--subtitle:nth-child(odd) {
+  text-align: right;
+}
+.header__anchor-container--quote-title {
+  font-weight: var(--font-weight-regular);
+  font-style: var(--font-style-normal);
+  font-size: var(--size-24);
+  font-weight: var(--font-weight-regular);
+  font-style: var(--font-style-italic);
+  text-align: center;
+  color: var(--neutral-white-opacity-75);
+}
+.header__anchor-container--bottom {
+  display: grid;
+  gap: var(--size-40);
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+.header__anchor-container--button-slide-bottom {
+  position: absolute;
+  bottom: 0;
+  animation: slide-bottom var(--transition-slow) infinite alternate both;
+}
+
+/*# sourceMappingURL=header.css.map */
